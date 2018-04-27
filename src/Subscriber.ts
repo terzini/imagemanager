@@ -1,15 +1,15 @@
 import {ILazyImageProps} from "./ILazyImageProps";
 
 export class Subscriber{
-    private lazyImageProps: ILazyImageProps;
-    private target: any;
+    public Target: any;
+    public LazyImageProps: ILazyImageProps;
 
     constructor( props: ILazyImageProps, target: any){
-        this.lazyImageProps = props;
-        this.target = target;
+        this.LazyImageProps = props;
+        this.Target = target;
     }
 
     public onLoadComplete(){
-        this.target.src = this.lazyImageProps.src;
+        this.Target.src = this.LazyImageProps.src;
     }    
 }
